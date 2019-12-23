@@ -9,14 +9,14 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 public class GamePanel extends JPanel implements KeyListener, Runnable {
-    private static final int WIDTH = 320;
-    private static final int HEIGHT = 240;
-    private static final int SCALE = 2;
+    public static final int WIDTH = 320;
+    public static final int HEIGHT = 240;
+    public static final int SCALE = 2;
     //typical game dimensions are 640x480
 
     // setting up game threads
     //WHY ***********************************************************************************
-    // TODO
+    // TODO *********************************************************** Don't understand
     private Thread thread;
     private boolean running;
     private int FPS = 60;
@@ -105,12 +105,15 @@ public class GamePanel extends JPanel implements KeyListener, Runnable {
     private void update() {
         gsm.update();
     }
+
     private void draw() {
         gsm.draw(graphics);
     }
+
+    //TODO ************************************************************ Don't understand
     private void drawToScreen() {
         Graphics g2 = getGraphics();
-        g2.drawImage(image, 0, 0, null);
+        g2.drawImage(image, 0, 0, WIDTH * SCALE, HEIGHT * SCALE, null);
         g2.dispose();
     }
 
@@ -118,6 +121,7 @@ public class GamePanel extends JPanel implements KeyListener, Runnable {
     public void keyPressed(KeyEvent key) {
         gsm.keyPressed(key.getKeyCode());
     }
+
     public void keyReleased(KeyEvent key) {
         gsm.keyReleased(key.getKeyCode());
     }
