@@ -1,10 +1,9 @@
-package TileMap;
+package src.TileMap;
 
-import Main.GamePanel;
-
+import src.Main.GamePanel;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import  javax.imageio.ImageIO;
+import javax.imageio.ImageIO;
 
 public class Background {
     private BufferedImage image;

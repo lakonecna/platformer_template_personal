@@ -1,4 +1,4 @@
-package GameState;
+package src.GameState;
 
 import java.util.ArrayList;
 

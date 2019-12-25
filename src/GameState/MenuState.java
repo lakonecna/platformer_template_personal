@@ -1,9 +1,9 @@
-package GameState;
+package src.GameState;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import src.TileMap.Background;
 
-import TileMap.Background;
 // TODO sort out the package problem
 public class MenuState extends GameState {
 
@@ -21,7 +21,7 @@ public class MenuState extends GameState {
 
         try {
             // TODO find and paste in image/ gif
-            background = new Background("/backgrounds/menubg.gif", 1);
+            background = new Background("/resources/backgrounds/menubg.jpg", 1);
             background.setVector(-0.1, 0);
             titleColor = new Color(128, 0, 0);
             titleFont = new Font("Century Gothic", Font.PLAIN, 20);

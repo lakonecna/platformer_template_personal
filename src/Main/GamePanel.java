@@ -1,7 +1,6 @@
-package Main;//
+package src.Main;
 
-import GameState.GameStateManager;
-
+import src.GameState.GameStateManager;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -85,6 +84,7 @@ public class GamePanel extends JPanel implements KeyListener, Runnable {
         while(running) {
 
             start = System.nanoTime();
+            //if(start <= 0)  start *= -1;
 
             update();
             draw();
@@ -94,6 +94,8 @@ public class GamePanel extends JPanel implements KeyListener, Runnable {
             wait = targetTime - elapsed/1000000;
 
             try {
+                System.out.println("Start_is_" + start);
+                System.out.println("Wait_is_" + wait);
                 Thread.sleep(wait);
             }
             catch(Exception e) {
